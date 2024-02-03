@@ -52,7 +52,7 @@
                 "Larakeeps\\AuthGuard\\Providers\\AuthGuardServiceProvider"
             ],
             "aliases": {
-                "AuthGuardOTP" : "Larakeeps\\AuthGuard\\Facades\\OTP"
+                "AuthGuard" : "Larakeeps\\AuthGuard\\Facades\\OTP"
             }
         }
     }

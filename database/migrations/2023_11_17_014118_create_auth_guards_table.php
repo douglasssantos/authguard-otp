@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('auth_guard_otp_codes', function (Blueprint $table) {
 
             $table->id();
-            $table->string('uuid');
             $table->text("access_token")->nullable();
             $table->string("reference")->nullable();
             $table->ipAddress()->nullable();
