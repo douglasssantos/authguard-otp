@@ -14,6 +14,7 @@ interface AuthGuardServiceInterface
     public function getMessage(): string;
     public function getStatus(): bool;
     public function get(): Collection;
+    public function getResponse(): Collection;
     public function create($phone, $email = null, $reference = null): AuthGuard | false;
     public function confirm($code, $phone, $reference = null): bool;
     public function deleteCode($code): bool;

@@ -34,7 +34,7 @@ use Larakeeps\AuthGuard\Facades\OTP;
  * @param string $email : optional
  * @param string $reference : optional
  * 
- * @method static AuthGuard|false create(string $phone, string|null $email, string|null $reference)
+ * @method static OTP create(string $phone, string|null $email, string|null $reference)
  * 
  * */
 
@@ -129,7 +129,7 @@ if($hasCode){
  * Method for finding and returning data.
  * $phone parameter is used for better code verification assertiveness.
  * 
- * @method static AuthGuard|false getByCode(string $code, string|null $phone)
+ * @method static OTP getByCode(string $code, string|null $phone)
  * 
  * */
 
@@ -158,7 +158,7 @@ use Larakeeps\AuthGuard\Facades\OTP;
  * @param string $phone : required
  * @param string $reference : optional
  * 
- * @method static AuthGuard|false confirm(string $code, string $phone, string|null $reference)
+ * @method static OTP confirm(string $code, string $phone, string|null $reference)
  * 
  * */
  
@@ -219,7 +219,7 @@ use Larakeeps\AuthGuard\Facades\OTP;
 
 /** 
  * 
- * @method bool deleteCode(string $code)
+ * @method OTP deleteCode(string $code)
  * 
  * */
  

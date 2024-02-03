@@ -16,7 +16,7 @@ class AuthGuardServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(AuthGuardServiceInterface::class, AuthGuardService::class);
-        $this->app->singleton('AuthGuardOTP', AuthGuardServiceInterface::class);
+        $this->app->singleton('AuthGuard', AuthGuardServiceInterface::class);
     }
 
     /**
