@@ -1,0 +1,59 @@
+{
+    "name": "larakeeps/authguard-otp",
+    "description": "AuthGuard OTP is a package intended for random code generation, validation and confirmation (OTP).",
+    "keywords": [
+        "larakeeps",
+        "laravel",
+        "permission",
+        "permissions",
+        "roles",
+        "otp",
+        "sms",
+        "validation",
+        "code",
+        "acl",
+        "rbac",
+        "security"
+    ],
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Douglas S. Santos",
+            "email": "douglassantos2127@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/douglasssantos/authguard-otp",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^10.10",
+        "illuminate/http": "^10.10",
+        "illuminate/database": "^v10.10",
+        "illuminate/collections": "^v10.10"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.19",
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Larakeeps\\AuthGuard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Larakeeps\\AuthGuard\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Larakeeps\\AuthGuard\\Providers\\AuthGuardServiceProvider"
+            ],
+            "aliases": {
+                "AuthGuardOTP" : "Larakeeps\\AuthGuard\\Facades\\OTP"
+            }
+        }
+    }
+}
