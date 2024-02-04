@@ -24,10 +24,16 @@ class AuthGuardServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->mergeConfigFrom( self::ROOT_PATH.'/config/authguard-otp.php', 'authguard-otp' );
         $this->loadMigrationsFrom(self::ROOT_PATH . '/database/migrations');
+
         $this->publishes([
             self::ROOT_PATH.'/database/migrations/2023_11_17_014118_create_auth_guards_table.php' => database_path('migrations/2023_11_17_014118_create_auth_guards_table.php'),
         ], 'authguard-otp-migrations');
+
+        $this->publishes([
+            self::ROOT_PATH.'/config/authguard-otp.php' => config_path('authguard-otp.php'),
+        ], 'authguard-otp-config');
 
     }
 }

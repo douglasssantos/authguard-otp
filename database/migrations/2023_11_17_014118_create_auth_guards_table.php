@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer("number_digits")->default(6);
             $table->string("code");
             $table->string("phone");
-            $table->string("email");
+            $table->string("email")->nullable();
 
             $table->integer("attempts_left");
             $table->timestamp("expires_at");
