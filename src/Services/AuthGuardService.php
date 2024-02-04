@@ -120,9 +120,9 @@ class AuthGuardService
     public function get(): Collection
     {
         return collect([
-            'status' => $this->message,
-            'message' => $this->message,
-            'authguard' => $this->data
+            'status' => $this->getStatus(),
+            'message' => $this->getMessage(),
+            'authguard' => $this->getData()
         ]);
     }
 
