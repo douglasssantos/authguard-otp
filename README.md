@@ -18,6 +18,10 @@ Second step, run the migration to create the tables: ```auth_guard_otp_codes```
 ```shell script
 php artisan migrate
 ```
+Third step, publish the authguard configuration, to publish the configurations run the command below:
+```shell script
+php artisan vendor:publish --tag=authguard-otp-config 
+```
 
 **Generating otp code**
 ```php
